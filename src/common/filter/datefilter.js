@@ -4,7 +4,7 @@
 
 //时间过滤器
 
-//引入vue 
+//引入vue
 import Vue from 'vue'
 
 //引入moment
