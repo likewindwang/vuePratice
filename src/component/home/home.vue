@@ -38,6 +38,7 @@
         </ul>
     </div>
 </template>
+
 <style scoped>
     /* 轮播图*/
     .mint-swipe{
@@ -93,6 +94,7 @@
         background-image: url(../../static/imgs/6.png);
     }
 </style>
+
 <script>
     export default{
         data(){
@@ -104,13 +106,13 @@
         methods:{
             //获取轮播图
             getswiper:function(){
+                //请求图片的路径
                 let url = 'http://182.254.146.100:8899/api/getlunbo';
 
                 this.$http.get(url)
                     .then((data)=>{
                         //一有数据就更新swipeItemList
                         this.swipeItemList = data.body;
-
                     })
             }
         },

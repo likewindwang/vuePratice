@@ -1,6 +1,6 @@
 <template>
-    <div>
-        
+    <div id="content">
+        <h1>{{text}}</h1>
     </div>
 </template>
 <style scoped>
@@ -10,11 +10,8 @@
     export default{
         data(){
             return{
-               
+               text:"购物车"
             }
-        },
-        methods:{
-            
         }
     }
 </script>
