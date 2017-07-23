@@ -11,8 +11,29 @@ import Vue from 'vue'
 import moment from 'moment'
 
 export default Vue.filter('datefilter',function(data,format){
-    //按照年月日 时分秒计算格式YYYY-MM-DD HH：mm:ss
-    return moment(data).format(format||'YYYY-MM-DD HH:mm:ss');
+    //判断是否是字符串 function undefined
+    if(Object.prototype.toString.call(data) === "[object String]"){
+
+        //按照年月日 时分秒计算格式YYYY-MM-DD HH：mm:ss
+        return moment(data).format(format||'YYYY-MM-DD HH:mm:ss');
+    }else{
+        return data;
+    }
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 

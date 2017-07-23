@@ -13,7 +13,7 @@
                 <div class="mui-media-body">新闻</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-                <div class="mui-media-body">Email</div></a></li>
+                <div class="mui-media-body">图片</div></a></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <span class="mui-icon mui-icon-chatbubble"></span>
                 <div class="mui-media-body">Chat</div></a></li>

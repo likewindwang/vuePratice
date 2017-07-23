@@ -1,19 +1,20 @@
 <template>
     <div id="content">
-
+        <!--1新闻内容-->
         <div class="title">
             <h4>{{newsinfo.title}}</h4>
             <p>{{newsinfo.add_time|datefilter}}   {{newsinfo.click}}次浏览</p>
         </div>
         <div id="info" v-html="newsinfo.content">
         </div>
-
+        <!--2新闻评论-->
+        <!--发表评论-->
         <div>
             <p>发表评论：</p>
             <textarea v-model="comments"></textarea>
             <mt-button @click="postcomments" type="danger" size="large">发表评论</mt-button>
         </div>
-
+        <!--评论列表-->
         <ul class="mui-table-view">
             <li v-for="item in commentList" class="mui-table-view-cell">
                 <p>评论时间：{{item.add_time|datefilter}}</p>
@@ -53,10 +54,10 @@
         methods:{
             //es6可以给方法添加默认值
             getcomments(pageindex=1){
-                console.log(pageindex);
+
                 //url地址
                 //http://182.254.146.100:8899/api/getcomments/13?pageindex=2
-                let url='${api.apidomain}/api/getcomments/${this.$route.params.id}?pageindex=${pageindex}';
+                let url=`${api.apidomain}/api/getcomments/${this.$route.params.id}?pageindex=${pageindex}`;
                 //获取评论数据
                 this.$http.get(url)
                     .then(data=>{
@@ -78,7 +79,7 @@
                 //不为空的数据 添加到服务器上
                 if(this.comments.trim().length>0){
                 //url地址
-                let url='${api.apidomain}/api/postcomment/${this.$route.params.id}';
+                let url=`${api.apidomain}/api/postcomment/${this.$route.params.id}`;
                 //点击按钮发布评论
                 this.$http.post(
                     url,
@@ -116,7 +117,7 @@
             },
             getnewsinfo:function () {
                 //url获取
-               let url='${api.apidomain}/api/getnew/${this.$route.params.id}';
+               let url=`${api.apidomain}/api/getnew/${this.$route.params.id}`;
                 //根据id获取新闻详细
                 this.$http.get(url)
                     .then(function (data) {

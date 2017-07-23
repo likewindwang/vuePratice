@@ -58,7 +58,7 @@
             //在做提交 上线版本 需要将整个功能都完成才可以提交
 
             getnews:function (){
-                console.log(this);
+
                 //新闻url  开发http://182.254.146.100:8899
                 // 测试http://182.254.146.100:7788
                 // 上线   http://www.itcast.com/api/getnewslist
