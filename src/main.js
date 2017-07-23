@@ -27,6 +27,11 @@ Vue.use(datefilter);
 import resource from 'vue-resource'
 Vue.use(resource);
 
+//图片预览
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview);
+
+
 //移入每个页面
 import home from './component/home/home.vue'
 import goods from './component/goods/goods.vue'
@@ -34,6 +39,13 @@ import news from './component/news/news.vue'
 import newsinfo from './component/news/newsinfo.vue'
 import shoppingcar from './component/shoppingcar/shoppingcar.vue'
 import settings from './component/settings/settings.vue'
+import photolist from './component/photo/photolist.vue'
+import photoinfo from './component/photo/photoinfo.vue'
+
+
+
+
+
 
 //引入mui样式
 import './static/css/mui.min.css'
@@ -58,7 +70,11 @@ let router = new VueRouter({
         //新闻
         {path:'/news',component:news},
         //新闻详情
-        {path:'/newsinfo',component:newsinfo}
+        {path:'/newsinfo',component:newsinfo},
+        //图片列表
+        {path:'/photolist/',component:photolist},
+        //图片详情
+        {path:'/photoinfo/:id',component:photoinfo}
     ]
 });
 
