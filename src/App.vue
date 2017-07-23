@@ -3,7 +3,7 @@
         <!--头部-->
         <header class="mui-bar mui-bar-nav">
             <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
-            <h1 class="mui-title">**购物网站</h1>
+            <h1 class="mui-title">虹口道场</h1>
         </header>
         <!--内容-->
         <router-view></router-view>
